@@ -1,0 +1,17 @@
+
+/* search-bar */
+.searchBar {
+    background-color: #3746AD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.searchBar > div {
+    right: 16px !important;
+    left: inherit !important;
+    bottom: inherit !important;
+    min-width: 220px;
+    font-size: 12px;
+}

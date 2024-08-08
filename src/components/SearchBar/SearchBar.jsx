@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import Loader from "./Loader";
+import Loader from "../Loader/Loader";
+import s from "./SearchBar.module.css"
 
 export default function SearchBar({ setSearchText, loading }) {
   const [inputVal, setInputVal] = useState("");
@@ -17,8 +18,8 @@ export default function SearchBar({ setSearchText, loading }) {
 
   return (
     <>
-      <header className="search-bar">
-        <form className="search-bar-form" onSubmit={handleSubmit}>
+      <header className={s.searchBar}>
+        <form className={s.searchBarForm} onSubmit={handleSubmit}>
           <input
             type="text"
             value={inputVal}
@@ -26,11 +27,11 @@ export default function SearchBar({ setSearchText, loading }) {
             autoComplete="off"
             autoFocus={true}
             placeholder="Search images and photos"
-            className="search-bar-input"
+            className={s.searchBarInput}
           />
-          <button type="submit" className="search-bar-button">Search</button>
+          <button type="submit" className={s.searchBarButton}>Search</button>
         </form>
-        {loading && <Loader />}
+        {loading  && <Loader />}
         <Toaster />
       </header>
     </>

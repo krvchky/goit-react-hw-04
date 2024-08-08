@@ -1,10 +1,11 @@
 
 import React from 'react';
+import s from "./LoadMoreBtn.module.css"
 
 export default function LoadMoreBtn({ loading, onClick }) {
   return (
-    <div className="load-more-container">
-      <button className="button-more" onClick={onClick} disabled={loading}>
+    <div className={s.loadMoreContainer}>
+      <button className={s.buttonMore} onClick={onClick} disabled={loading}>
         {loading ? 'Loading...' : 'Load more'}
       </button>
     </div>

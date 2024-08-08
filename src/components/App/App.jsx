@@ -1,12 +1,13 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ImageGallery from './ImageGallery';
-import SearchBar from './SearchBar';
-import LoadMoreBtn from './LoadMoreBtn';
-import Loader from './Loader';
-import ImageModal from './ImageModal';
-import ErrorMessage from './ErrorMessage';
+import ImageGallery from '../ImageGallery/ImageGallery';
+import SearchBar from '../SearchBar/SearchBar';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
+import Loader from '../Loader/Loader';
+import ImageModal from '../ImageModal/ImageModal';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import s from './App.module.css';
 
 export default function App() {
   const [searchText, setSearchText] = useState('');
@@ -78,7 +79,7 @@ export default function App() {
 
   return (
     <>
-      <div className="search-bar">
+      <div className= {s.searchBar}>
         <SearchBar setSearchText={setSearchText} />
       </div>
       {loading && <Loader />}
@@ -97,4 +98,4 @@ export default function App() {
       )}
     </>
   );
-}
+};

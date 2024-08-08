@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Modal from 'react-modal';
+import s from "./ImageModal.module.css"
 
 Modal.setAppElement('#root');
 
@@ -9,10 +10,10 @@ export default function ImageModal({ isOpen, onRequestClose, photo }) {
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      className="modal-content"
+      className={s.modalContent}
       overlayClassName="ReactModal__Overlay"
     >
-      <div className="modal-body" onClick={onRequestClose}>
+      <div  onClick={onRequestClose}>
         <img src={photo.urls.regular} alt={photo.alt_description} />
       </div>
     </Modal>
